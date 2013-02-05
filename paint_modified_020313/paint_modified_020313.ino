@@ -66,9 +66,12 @@ Tft.fillRectangle(150,0,30,PAL_WIDTH,YELLOW);
 Tft.fillRectangle(180,0,30,PAL_WIDTH,WHITE);
 Tft.fillRectangle(210,0,30,PAL_WIDTH,PINK);
 
-//Draw the CLEAR ALL Button
+//Draw the CLEAR ALL Button | JW 02/03/13
+
+//This is the Square | JW 02/03/13
 Tft.fillRectangle(0, 290, 30, 30, WHITE);
-//void drawChar(unsigned char ascii,unsigned int poX, unsigned int poY,unsigned int size, unsigned int fgcolor)
+
+// This is the X in ASCII Format | JW 02/03/13
 Tft.drawChar(88,0,290,4.5,BLACK);  
 }
 
@@ -95,7 +98,7 @@ void loop()
   {
     if(p.x >= 0 && p.x < 30)
     {
-      color = ORANGE;
+      color = ORANGE;        // For Unavailable Colors, refer to http://wiibrew.org/wiki/U16_colors & http://en.wikipedia.org/wiki/High_color | JW 02/03/13
     }
     if(p.x >= 30 && p.x < 60)
     {
@@ -129,6 +132,7 @@ void loop()
     }    
   }
   
+  //This is the CLEAR ALL Button in the Bottom Right Corner | JW 02/03/13
   else if (p.y >= 290 && p.y <320 && p.x >= 0 && p.x <= 30)
   {
     setup();
